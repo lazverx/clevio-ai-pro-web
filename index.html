@@ -844,10 +844,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   }
 
   /* ============================================================= */
-  /* GELOMBANG 3 ENHANCED: DESKTOP STICKY 1-5 & MOBILE 100DVH ENGINE */
+  /* GELOMBANG 3 ENHANCED: REFINED DESKTOP & MOBILE ENGINE */
   /* ============================================================= */
   
-  /* Guarantee media overlay never blocks photos */
+  /* Media overlay never blocks photos */
   .c-media__overlay {
     display: none !important;
   }
@@ -861,16 +861,295 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     visibility: visible !important;
   }
 
-  /* Desktop-only: Competency Section Navigation & Pinned Viewer */
+  /* ITEM 4 (DESKTOP & MOBILE): ENHANCED METODE WORKSHOP CARDS */
+  .c-expertise-card {
+    background: linear-gradient(150deg, #1b1b1d 0%, #121213 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 14px !important;
+    padding: clamp(1.2rem, 2.2vw, 1.8rem) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+  .c-expertise-card:hover {
+    border-color: rgba(208, 17, 43, 0.45) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4) !important;
+  }
+  .c-method-step-badge {
+    font-family: 'Sono Proportional', monospace !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: #D0112B !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.45rem !important;
+    margin-bottom: 0.65rem !important;
+    background: rgba(208, 17, 43, 0.08) !important;
+    padding: 0.25rem 0.65rem !important;
+    border-radius: 100px !important;
+    width: fit-content !important;
+    border: 1px solid rgba(208, 17, 43, 0.2) !important;
+  }
+  .c-method-step-dot {
+    width: 6px !important;
+    height: 6px !important;
+    background: #D0112B !important;
+    border-radius: 50% !important;
+    display: inline-block !important;
+  }
+  .c-expertise-card__title {
+    font-family: General Sans, sans-serif !important;
+    font-size: clamp(1.15rem, 1.4vw, 1.35rem) !important;
+    font-weight: 600 !important;
+    color: #FAFAFA !important;
+    line-height: 1.22 !important;
+    margin-bottom: 0.65rem !important;
+  }
+  .c-expertise-card__description p {
+    font-size: 0.88rem !important;
+    line-height: 1.52 !important;
+    color: rgba(250, 250, 250, 0.75) !important;
+    margin-bottom: 1rem !important;
+  }
+  .c-method-output-box {
+    background: rgba(208, 17, 43, 0.06) !important;
+    border-left: 3px solid #D0112B !important;
+    border-radius: 6px !important;
+    padding: 0.65rem 0.85rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .c-method-output-label {
+    font-family: 'Sono Proportional', monospace !important;
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    color: #D0112B !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+  .c-method-output-text {
+    font-family: General Sans, sans-serif !important;
+    font-size: 0.82rem !important;
+    font-weight: 500 !important;
+    color: #FAFAFA !important;
+    line-height: 1.35 !important;
+  }
+  .c-method-card-footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-top: 0.75rem !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+    margin-top: auto !important;
+  }
+  .c-method-card-action {
+    font-family: 'Sono Proportional', monospace !important;
+    font-size: 0.75rem !important;
+    color: rgba(250, 250, 250, 0.6) !important;
+    letter-spacing: 0.02em !important;
+    transition: color 0.2s ease !important;
+  }
+  .c-expertise-card:hover .c-method-card-action {
+    color: #FAFAFA !important;
+  }
+
+  /* ITEM 5: REWORKED EXECUTIVE B2B FOOTER */
+  .c-footer {
+    padding: clamp(50px, 6vw, 75px) 0 28px 0 !important;
+    background: #09090a !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    position: relative !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  .c-footer__logo {
+    display: none !important;
+  }
+  .c-footer-grid {
+    display: grid !important;
+    grid-template-columns: 1.4fr 1fr 1fr 1.3fr !important;
+    gap: clamp(2rem, 3.5vw, 4rem) !important;
+    margin-bottom: clamp(2.5rem, 4vw, 3.5rem) !important;
+  }
+  @media (max-width: 991px) {
+    .c-footer-grid {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 2rem !important;
+    }
+  }
+  @media (max-width: 575px) {
+    .c-footer-grid {
+      grid-template-columns: 1fr !important;
+      gap: 2rem !important;
+    }
+  }
+  .c-footer-brand-img {
+    height: 32px !important;
+    width: auto !important;
+    display: block !important;
+    margin-bottom: 1.25rem !important;
+    background: transparent !important;
+  }
+  .c-footer-brand-desc {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+    color: rgba(250, 250, 250, 0.7) !important;
+    margin-bottom: 0.65rem !important;
+    max-width: 320px !important;
+  }
+  .c-footer-brand-org {
+    font-size: 0.78rem !important;
+    color: rgba(250, 250, 250, 0.45) !important;
+    margin-bottom: 1.25rem !important;
+  }
+  .c-footer-socials-row {
+    display: flex !important;
+    gap: 0.6rem !important;
+  }
+  .c-footer-social-btn {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #FAFAFA !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.95rem !important;
+    transition: all 0.25s ease !important;
+    text-decoration: none !important;
+  }
+  .c-footer-social-btn:hover {
+    background: #D0112B !important;
+    border-color: #D0112B !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px) !important;
+  }
+  .c-footer-col-header {
+    font-family: 'Sono Proportional', monospace !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    color: #D0112B !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 1.25rem !important;
+  }
+  .c-footer-nav-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+  }
+  .c-footer-nav-link {
+    font-family: General Sans, sans-serif !important;
+    font-size: 0.88rem !important;
+    color: rgba(250, 250, 250, 0.68) !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+  }
+  .c-footer-nav-link:hover {
+    color: #FAFAFA !important;
+  }
+  .c-footer-cta-text {
+    font-size: 0.88rem !important;
+    color: rgba(250, 250, 250, 0.72) !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1rem !important;
+  }
+  .c-footer-contact-items {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+  .c-footer-contact-item {
+    font-size: 0.85rem !important;
+    display: flex !important;
+    gap: 0.45rem !important;
+  }
+  .c-footer-contact-label {
+    color: rgba(250, 250, 250, 0.5) !important;
+  }
+  .c-footer-contact-val {
+    color: #FAFAFA !important;
+    text-decoration: none !important;
+  }
+  .c-footer-contact-val:hover {
+    color: #D0112B !important;
+  }
+  .c-footer-btn-wrapper .c-cta {
+    display: inline-flex !important;
+    padding: 0.75rem 1.4rem !important;
+    font-size: 0.85rem !important;
+  }
+  .c-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-top: 1.4rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-size: 0.78rem !important;
+    color: rgba(250, 250, 250, 0.45) !important;
+    line-height: 1.4 !important;
+  }
+  @media (max-width: 768px) {
+    .c-footer-bottom {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.5rem !important;
+    }
+  }
+
+  /* ITEM 1: DESKTOP TOMBOL 1-5 NAVIGATION - NO OVERLAP WITH 'LIMA' */
   @media (min-width: 992px) {
-    .c-project-card__mobile-thumb-wrapper {
+    .c-project-card__mobile-thumb-wrapper,
+    .c-project-card__inner-sides {
       display: none !important;
     }
+    .c-project-card {
+      padding: 2.2rem 2.2rem 1.8rem 2.2rem !important;
+      max-width: 460px !important;
+      height: auto !important;
+      min-height: auto !important;
+    }
+    .c-project-card__inner {
+      gap: 1.25rem !important;
+      height: auto !important;
+    }
     .c-home-projects__cards-nav-container {
-      position: sticky !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      pointer-events: none !important;
+      transform: none !important;
+      z-index: 5 !important;
+    }
+    .c-home-projects__cards-nav {
+      position: absolute !important;
+      left: var(--grid-margin, 40px) !important;
       top: 50% !important;
       transform: translateY(-50%) !important;
-      z-index: 10 !important;
+      pointer-events: all !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0.5rem !important;
     }
     .c-home-projects__cards-nav-link {
       cursor: pointer !important;
@@ -895,10 +1174,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     }
   }
 
-  /* Mobile Layout Engine: Exactly 1 Section = 1 Screen (100dvh / 100svh) */
+  /* ITEM 2 & 3: MOBILE LAYOUT ENGINE WITH PROPORTIONAL 13+ TAHUN CARD & CLEAN COMPETENCY CARDS */
   @media (max-width: 991px) {
     html {
-      scroll-snap-type: y mandatory !important;
+      scroll-snap-type: y proximity !important;
       scroll-behavior: smooth !important;
       overflow-x: hidden !important;
       width: 100% !important;
@@ -915,20 +1194,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       overflow-x: hidden !important;
     }
 
-    /* Fixed footer logo overflow on mobile */
-    .c-footer__logo,
-    .c-footer__logo img,
-    .c-footer__logo-img {
-      max-width: 100% !important;
-      width: auto !important;
-      height: auto !important;
-      overflow: hidden !important;
-      box-sizing: border-box !important;
-    }
-
-    /* 1 Section = 1 Full Viewport with Vertical Centering */
+    /* 1 Section = 1 Screen (min-height: 100dvh) */
     .c-hero-screen,
-    .c-trust-deliverables-strip,
     .c-home-about,
     .c-home-target,
     .c-home-expertises,
@@ -984,9 +1251,91 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       display: none !important;
     }
 
-    /* Section 0B: Trust & Deliverables Strip on Mobile */
+    /* ITEM 2: CARD 13+ TAHUN CLEVIO - NATURAL PROPORTIONS, NO LONJONG, NO BLANK SPACE */
     .c-trust-deliverables-strip {
-      padding: 2rem clamp(16px, 4vw, 24px) !important;
+      min-height: auto !important;
+      height: auto !important;
+      margin: 1.5rem clamp(16px, 4vw, 24px) 2rem clamp(16px, 4vw, 24px) !important;
+      padding: 1.4rem 1.25rem !important;
+      border-radius: 14px !important;
+      background: #141414 !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      box-sizing: border-box !important;
+      scroll-snap-align: none !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.2rem !important;
+    }
+    .c-trust-credentials {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0.45rem !important;
+    }
+    .c-trust-brand-tag {
+      font-family: 'Sono Proportional', monospace !important;
+      font-size: 0.72rem !important;
+      font-weight: 600 !important;
+      color: #D0112B !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+    }
+    .c-trust-stats-row {
+      display: flex !important;
+      align-items: center !important;
+      gap: 1.5rem !important;
+    }
+    .c-trust-stat__num {
+      font-size: 1.85rem !important;
+      font-weight: 600 !important;
+      color: #FAFAFA !important;
+      line-height: 1 !important;
+    }
+    .c-trust-stat__label {
+      font-family: 'Sono Proportional', monospace !important;
+      font-size: 0.72rem !important;
+      color: rgba(250, 250, 250, 0.65) !important;
+      line-height: 1.3 !important;
+    }
+    .c-trust-main-divider {
+      display: none !important;
+    }
+    .c-trust-deliverables {
+      margin-top: 0 !important;
+      padding-top: 1rem !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0.85rem !important;
+    }
+    .c-trust-deliverables__heading {
+      font-size: 0.92rem !important;
+      font-weight: 600 !important;
+      color: #FAFAFA !important;
+      margin-bottom: 0.2rem !important;
+    }
+    .c-trust-deliverables__grid {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0.85rem !important;
+    }
+    .c-deliverable-item {
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 0.75rem !important;
+    }
+    .c-deliverable-item__icon {
+      flex-shrink: 0 !important;
+      margin-top: 2px !important;
+    }
+    .c-deliverable-item__title {
+      font-size: 0.88rem !important;
+      font-weight: 600 !important;
+      color: #FAFAFA !important;
+    }
+    .c-deliverable-item__desc {
+      font-size: 0.78rem !important;
+      line-height: 1.4 !important;
+      color: rgba(250, 250, 250, 0.7) !important;
     }
 
     /* Section 1: Konteks Perubahan (c-home-about) */
@@ -1083,7 +1432,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       line-height: 1.4 !important;
     }
 
-    /* Section 3: Metode Workshop (c-home-expertises) - FIXED OFFSIDE & HORIZONTAL OVERFLOW */
+    /* Section 3: Metode Workshop Cards on Mobile */
     .c-method-title {
       font-size: clamp(1.4rem, 4.2vw, 1.85rem) !important;
       line-height: 1.15 !important;
@@ -1092,7 +1441,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     .c-home-expertises__cards {
       display: flex !important;
       flex-direction: column !important;
-      gap: 0.45rem !important;
+      gap: 0.65rem !important;
       width: 100% !important;
       max-width: 100% !important;
       box-sizing: border-box !important;
@@ -1107,14 +1456,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       padding: 0 !important;
     }
     .c-expertise-card {
-      background: #181818 !important;
-      border: 1px solid rgba(255, 255, 255, 0.08) !important;
-      border-radius: 10px !important;
-      padding: 0.65rem 0.85rem !important;
-      overflow: hidden !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
+      padding: 0.85rem 1rem !important;
+      border-radius: 12px !important;
     }
     .c-expertise-card__inner,
     .c-expertise-card__info,
@@ -1129,21 +1472,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       display: none !important;
     }
     .c-expertise-card__title {
-      font-size: 0.98rem !important;
+      font-size: 1.05rem !important;
       line-height: 1.25 !important;
-      margin-bottom: 0.15rem !important;
-    }
-    .c-expertise-card__description p {
-      font-size: 0.78rem !important;
-      line-height: 1.38 !important;
       margin-bottom: 0.25rem !important;
     }
-    .c-expertise-card .c-icon-btn {
-      opacity: 1 !important;
-      visibility: visible !important;
-      transform: none !important;
-      padding: 0.3rem 0.6rem !important;
-      font-size: 0.72rem !important;
+    .c-expertise-card__description p {
+      font-size: 0.8rem !important;
+      line-height: 1.42 !important;
+      margin-bottom: 0.45rem !important;
     }
     .c-expertise-card .u-word {
       opacity: 1 !important;
@@ -1153,7 +1489,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       transform: none !important;
     }
 
-    /* Section 4: Lima Kompetensi (c-home-projects) on Mobile */
+    /* ITEM 3: SECTION LIMA KOMPETENSI DI MOBILE - PHOTO 100% INSIDE THE CARD */
     .c-home-projects {
       min-height: auto !important;
       height: auto !important;
@@ -1164,14 +1500,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       margin-bottom: 0 !important;
     }
     .c-home-projects__title {
-      font-size: clamp(1.75rem, 5.0vw, 2.3rem) !important;
+      font-size: clamp(1.65rem, 4.8vw, 2.2rem) !important;
       line-height: 1.15 !important;
       display: flex !important;
       flex-direction: row !important;
       align-items: baseline !important;
       gap: 0.45rem !important;
       width: 100% !important;
-      padding: 1rem clamp(16px, 4vw, 24px) 0 clamp(16px, 4vw, 24px) !important;
+      padding: 1.25rem clamp(16px, 4vw, 24px) 0.5rem clamp(16px, 4vw, 24px) !important;
     }
     .c-home-projects__title .--left,
     .c-home-projects__title .--right {
@@ -1185,11 +1521,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     .c-home-projects__cards {
       display: flex !important;
       flex-direction: column !important;
-      gap: 0 !important;
+      gap: 1.25rem !important;
       height: auto !important;
       min-height: auto !important;
       width: 100% !important;
       box-sizing: border-box !important;
+      padding: 0 clamp(16px, 4vw, 24px) 2rem clamp(16px, 4vw, 24px) !important;
     }
     .c-home-projects__cards-images {
       display: none !important;
@@ -1198,31 +1535,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       display: none !important;
     }
     .c-home-projects__card-container {
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: center !important;
-      height: auto !important;
-      min-height: 100dvh !important;
-      min-height: 100svh !important;
-      scroll-snap-align: start !important;
-      scroll-snap-stop: normal !important;
-      margin: 0 !important;
-      padding: clamp(65px, 8vh, 80px) clamp(16px, 4vw, 24px) 2rem clamp(16px, 4vw, 24px) !important;
-      box-sizing: border-box !important;
-      position: relative !important;
-    }
-    .c-home-projects__card-wrapper {
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: center !important;
-      height: 100% !important;
-      min-height: auto !important;
-      width: 100% !important;
-    }
-    .c-home-projects__card-bg.--top-bottom {
       display: block !important;
       height: auto !important;
+      min-height: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
       position: relative !important;
+      scroll-snap-align: none !important;
+    }
+    .c-home-projects__card-wrapper {
+      display: block !important;
+      height: auto !important;
       width: 100% !important;
     }
     .c-home-projects__card-bg.--left,
@@ -1231,6 +1555,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     .c-home-projects__card-bg.--bottom {
       display: none !important;
     }
+    .c-home-projects__card-bg.--top-bottom {
+      display: block !important;
+      position: relative !important;
+      width: 100% !important;
+      height: auto !important;
+      margin: 0 0 1.5rem 0 !important;
+    }
+
+    /* Clean, Elegant Mobile Competency Card with Image Securely INSIDE */
     .c-project-card {
       position: relative !important;
       inset: auto !important;
@@ -1240,70 +1573,103 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       width: 100% !important;
       height: auto !important;
       min-height: auto !important;
-      background: #181818 !important;
-      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      background: #fafafa !important;
       border-radius: 14px !important;
-      padding: 1.25rem !important;
+      padding: 1.15rem !important;
       display: flex !important;
       flex-direction: column !important;
       box-sizing: border-box !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35) !important;
+      outline: none !important;
     }
     .c-project-card__inner {
       position: relative !important;
       display: flex !important;
       flex-direction: column !important;
+      gap: 0.65rem !important;
+      padding: 0 !important;
+      height: auto !important;
+    }
+    .c-project-card__category {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      background: transparent !important;
+      padding: 0 !important;
+      margin-bottom: 0.15rem !important;
+    }
+    .c-project-card__category-name {
+      font-family: 'Sono Proportional', monospace !important;
+      font-size: 0.78rem !important;
+      font-weight: 700 !important;
+      color: #121212 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+    }
+    .c-project-card__category-circle {
+      width: 8px !important;
+      height: 8px !important;
+      background-color: #D0112B !important;
+      border-radius: 50% !important;
+    }
+    .c-project-card__inner-sides {
+      position: relative !important;
+      width: 100% !important;
+      height: 190px !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+      display: block !important;
+      margin: 0 !important;
+      background: #181818 !important;
+    }
+    .c-project-card__inner-sides:before {
+      display: none !important;
+    }
+    .c-project-card__inner-side {
+      display: none !important;
     }
     .c-project-card__mobile-thumb-wrapper {
       display: block !important;
+      position: absolute !important;
+      inset: 0 !important;
       width: 100% !important;
-      margin-bottom: 0.85rem !important;
-      border-radius: 10px !important;
+      height: 100% !important;
+      margin: 0 !important;
+      border-radius: 8px !important;
       overflow: hidden !important;
-      aspect-ratio: 16 / 10 !important;
-      background: #202020 !important;
     }
     .c-project-card__mobile-thumb {
       width: 100% !important;
       height: 100% !important;
       object-fit: cover !important;
       display: block !important;
-      opacity: 1 !important;
-      visibility: visible !important;
     }
-    .c-project-card__category {
-      display: flex !important;
-      align-items: center !important;
-      gap: 0.5rem !important;
-      margin-bottom: 0.4rem !important;
-    }
-    .c-project-card__category-name {
-      font-family: 'Sono Proportional', monospace !important;
-      font-size: 0.78rem !important;
-      font-weight: 600 !important;
-      color: #D0112B !important;
-      text-transform: uppercase !important;
-      letter-spacing: 0.08em !important;
-      opacity: 1 !important;
-    }
-    .c-project-card__category-circle {
-      width: 6px !important;
-      height: 6px !important;
-      background-color: #D0112B !important;
-      border-radius: 50% !important;
+    .c-home-projects .c-project-card__info {
+      background: transparent !important;
+      padding: 0.2rem 0 0 0 !important;
     }
     .c-project-card__title {
       font-family: General Sans, sans-serif !important;
       font-size: 1.25rem !important;
-      line-height: 1.25 !important;
+      line-height: 1.22 !important;
       font-weight: 600 !important;
-      color: #FAFAFA !important;
-      margin: 0 0 0.4rem 0 !important;
+      color: #121212 !important;
+      margin: 0 0 0.35rem 0 !important;
     }
     .c-project-card__description p {
-      font-size: 0.88rem !important;
-      line-height: 1.5 !important;
-      color: rgba(250, 250, 250, 0.72) !important;
+      font-size: 0.85rem !important;
+      line-height: 1.48 !important;
+      color: rgba(18, 18, 18, 0.72) !important;
       margin: 0 !important;
+    }
+    .c-project-card__redirect-container {
+      margin-top: 0.75rem !important;
+      display: flex !important;
+      justify-content: flex-end !important;
+    }
+    .c-project-card .c-icon-btn {
+      background-color: rgba(18, 18, 18, 0.08) !important;
+      border: 1px solid rgba(18, 18, 18, 0.12) !important;
     }
     .c-home-projects__bottom-line-ctn {
       display: none !important;
@@ -1599,12 +1965,48 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <path d="M769 768C769 555.37 597.077 383 385 383C172.923 383 1 555.37 1 768" stroke="#121212"/>
 <line x1="384.51" y1="767.902" x2="537.51" y2="0.902145" stroke="#121212"/>
 </svg>
-</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a><h3 class="c-expertise-card__title">01 Pahami konteks bisnis</h3><div class="c-expertise-card__info"><div class="c-expertise-card__description | o-wysiwyg"><p>Mengidentifikasi kebutuhan, tantangan, dan peluang nyata organisasi Anda. Peserta membawa satu tantangan nyata dari tempat kerja sebagai bahan utama workshop.<br><strong style="color:#D0112B">Output: Problem Statement yang jelas</strong></p></div><div class="c-icon-btn --arrow-bottom-right --red" aria-hidden="true"></div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>02</span> / 04</div><article class="c-expertise-card --b" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="768" height="768" viewBox="0 0 768 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a>
+      <div class="c-method-step-badge"><span class="c-method-step-dot"></span> Tahap 01</div>
+      <h3 class="c-expertise-card__title">01 Pahami Konteks Bisnis</h3>
+      <div class="c-expertise-card__info">
+        <div class="c-expertise-card__description | o-wysiwyg">
+          <p>Mengidentifikasi kebutuhan, tantangan, dan peluang nyata organisasi Anda. Peserta membawa satu tantangan nyata dari tempat kerja sebagai bahan utama workshop.</p>
+        </div>
+        <div class="c-method-output-box">
+          <div class="c-method-output-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D0112B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            TARGET KELUARAN
+          </div>
+          <div class="c-method-output-text">Problem Statement &amp; Business Case yang jelas</div>
+        </div>
+        <div class="c-method-card-footer">
+          <span class="c-method-card-action">Pelajari format workshop</span>
+          <div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div>
+        </div>
+      </div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>02</span> / 04</div><article class="c-expertise-card --b" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="768" height="768" viewBox="0 0 768 768" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M65.9355 384.379C153.466 471.909 295.71 471.584 383.647 383.646C471.585 295.709 471.91 153.465 384.38 65.9346C296.85 -21.5955 154.605 -21.2704 66.668 66.667C-21.2693 154.604 -21.5945 296.849 65.9355 384.379Z" stroke="#121212"/>
 <path d="M383.623 702.065C471.153 789.595 613.398 789.27 701.335 701.333C789.272 613.396 789.597 471.151 702.067 383.621C614.537 296.091 472.293 296.416 384.355 384.354C296.418 472.291 296.093 614.535 383.623 702.065Z" stroke="#121212"/>
 <line y1="-0.5" x2="449.277" y2="-0.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 225.402 225.401)" stroke="#121212"/>
 </svg>
-</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a><h3 class="c-expertise-card__title">02 Design Thinking + AI</h3><div class="c-expertise-card__info"><div class="c-expertise-card__description | o-wysiwyg"><p>Merancang alternatif solusi yang berpusat pada manusia dengan dukungan kapabilitas AI. Gagasan diuji sejak awal agar arah solusi tetap relevan dengan kebutuhan pengguna.<br><strong style="color:#D0112B">Output: AI Opportunity Map terprioritas</strong></p></div><div class="c-icon-btn --arrow-bottom-right --red" aria-hidden="true"></div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>03</span> / 04</div><article class="c-expertise-card --c" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="768" height="768" viewBox="0 0 768 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a>
+      <div class="c-method-step-badge"><span class="c-method-step-dot"></span> Tahap 02</div>
+      <h3 class="c-expertise-card__title">02 Design Thinking + AI</h3>
+      <div class="c-expertise-card__info">
+        <div class="c-expertise-card__description | o-wysiwyg">
+          <p>Merancang alternatif solusi yang berpusat pada manusia dengan dukungan kapabilitas AI. Gagasan diuji sejak awal agar arah solusi tetap relevan dengan kebutuhan pengguna.</p>
+        </div>
+        <div class="c-method-output-box">
+          <div class="c-method-output-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D0112B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            TARGET KELUARAN
+          </div>
+          <div class="c-method-output-text">AI Opportunity Map &amp; Prioritas Solusi</div>
+        </div>
+        <div class="c-method-card-footer">
+          <span class="c-method-card-action">Pelajari format workshop</span>
+          <div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div>
+        </div>
+      </div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>03</span> / 04</div><article class="c-expertise-card --c" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="768" height="768" viewBox="0 0 768 768" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_4711_23527)">
 <line x1="77.9991" y1="383.5" x2="689.999" y2="383.5" stroke="#121212"/>
 <path d="M385.047 0.500977C324.49 0.726059 263.794 38.3035 217.373 113.359C170.951 188.416 147.64 286.68 147.5 384.884C147.361 483.088 170.393 581.178 216.601 655.89C262.808 730.599 323.395 767.724 383.951 767.499C444.509 767.274 505.204 729.697 551.625 654.641C598.047 579.584 621.359 481.32 621.498 383.116C621.638 284.912 598.606 186.822 552.398 112.11C506.19 37.4007 445.603 0.275906 385.047 0.500977Z" stroke="#121212"/>
@@ -1616,13 +2018,49 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </clipPath>
 </defs>
 </svg>
-</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a><h3 class="c-expertise-card__title">03 Validasi & rencana aksi</h3><div class="c-expertise-card__info"><div class="c-expertise-card__description | o-wysiwyg"><p>Menguji asumsi, menyempurnakan pendekatan, dan menyusun roadmap implementasi. Setiap peserta pulang dengan langkah kerja yang siap dijalankan.<br><strong style="color:#D0112B">Output: Action Plan Awal yang terukur</strong></p></div><div class="c-icon-btn --arrow-bottom-right --red" aria-hidden="true"></div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>04</span> / 04</div><article class="c-expertise-card --d" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="968" height="768" viewBox="0 0 968 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a>
+      <div class="c-method-step-badge"><span class="c-method-step-dot"></span> Tahap 03</div>
+      <h3 class="c-expertise-card__title">03 Validasi & Rencana Aksi</h3>
+      <div class="c-expertise-card__info">
+        <div class="c-expertise-card__description | o-wysiwyg">
+          <p>Menguji asumsi, menyempurnakan pendekatan, dan menyusun roadmap implementasi. Setiap peserta pulang dengan langkah kerja yang siap dijalankan.</p>
+        </div>
+        <div class="c-method-output-box">
+          <div class="c-method-output-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D0112B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            TARGET KELUARAN
+          </div>
+          <div class="c-method-output-text">Action Plan Terukur &amp; Matriks Eksekusi</div>
+        </div>
+        <div class="c-method-card-footer">
+          <span class="c-method-card-action">Pelajari format workshop</span>
+          <div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div>
+        </div>
+      </div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>04</span> / 04</div><article class="c-expertise-card --d" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="968" height="768" viewBox="0 0 968 768" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="725.31" cy="383.762" r="241.27" stroke="#121212"/>
   <circle cx="483.54" cy="525.754" r="241.27" stroke="#121212"/>
   <circle cx="241.77" cy="383.762" r="241.27" stroke="#121212"/>
   <circle cx="483.54" cy="241.77" r="241.27" stroke="#121212"/>
 </svg>
-</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a><h3 class="c-expertise-card__title">Format: Flipped Learning · 1 Hari</h3><div class="c-expertise-card__info"><div class="c-expertise-card__description | o-wysiwyg"><p>1 hari intensif praktik langsung berbasis kasus nyata organisasi. Materi dipelajari lebih awal, sehingga waktu workshop difokuskan sepenuhnya untuk diskusi strategis, eksplorasi solusi, dan penyusunan action plan.</p></div><div class="c-icon-btn --arrow-bottom-right --red" aria-hidden="true"></div></div></div></article></div></div></div></section><section class="c-home-projects" id="kompetensi"><div class="c-home-projects__wrapper | o-wrapper --lg"><h2 class="c-home-projects__title"><span class="c-home-projects__title --left">Lima</span><span class="c-home-projects__title --right">kompetensi</span></h2></div><div class="c-home-projects__cards"><div class="c-home-projects__cards-overlay-container"><div class="c-home-projects__cards-overlay"><div class="c-home-projects__cards-circles"><div class="c-home-projects__cards-circle --left" data-generic-opacity></div><div class="c-home-projects__cards-circle --right" data-generic-opacity></div></div><div class="c-home-projects__cards-nav-container"><div class="c-home-projects__cards-nav">
+</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a>
+      <div class="c-method-step-badge"><span class="c-method-step-dot"></span> Metodologi Unggulan</div>
+      <h3 class="c-expertise-card__title">Format Flipped Learning · 1 Hari</h3>
+      <div class="c-expertise-card__info">
+        <div class="c-expertise-card__description | o-wysiwyg">
+          <p>1 hari intensif praktik langsung berbasis kasus nyata organisasi. Materi dipelajari lebih awal, sehingga waktu workshop difokuskan sepenuhnya untuk diskusi strategis, eksplorasi solusi, dan penyusunan action plan.</p>
+        </div>
+        <div class="c-method-output-box">
+          <div class="c-method-output-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D0112B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            TARGET KELUARAN
+          </div>
+          <div class="c-method-output-text">Efisiensi Maksimal: 80% Diskusi &amp; Praktik Nyata</div>
+        </div>
+        <div class="c-method-card-footer">
+          <span class="c-method-card-action">Pelajari format workshop</span>
+          <div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div>
+        </div>
+      </div></div></div></article></div></div></div></section><section class="c-home-projects" id="kompetensi"><div class="c-home-projects__wrapper | o-wrapper --lg"><h2 class="c-home-projects__title"><span class="c-home-projects__title --left">Lima</span><span class="c-home-projects__title --right">kompetensi</span></h2></div><div class="c-home-projects__cards"><div class="c-home-projects__cards-overlay-container"><div class="c-home-projects__cards-overlay"><div class="c-home-projects__cards-circles"><div class="c-home-projects__cards-circle --left" data-generic-opacity></div><div class="c-home-projects__cards-circle --right" data-generic-opacity></div></div><div class="c-home-projects__cards-nav-container"><div class="c-home-projects__cards-nav">
   <a href="#berpikir-kritis" class="c-home-projects__cards-nav-link --active" data-project-index="01" aria-label="Ke kompetensi 01">01</a>
   <a href="#empati" class="c-home-projects__cards-nav-link" data-project-index="02" aria-label="Ke kompetensi 02">02</a>
   <a href="#literasi-ai" class="c-home-projects__cards-nav-link" data-project-index="03" aria-label="Ke kompetensi 03">03</a>
@@ -1634,11 +2072,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   <div class="c-image c-home-projects__card-image" data-project-index="03"><div class="c-image__wrapper"><img src="./assets/images/clevio/leadership-editorial.webp" alt="Kompetensi Literasi AI" class=""></div></div>
   <div class="c-image c-home-projects__card-image" data-project-index="04"><div class="c-image__wrapper"><img src="./assets/images/clevio/professional-training.jpg" alt="Kompetensi Kepemimpinan" class=""></div></div>
   <div class="c-image c-home-projects__card-image" data-project-index="05"><div class="c-image__wrapper"><img src="./assets/images/clevio/professional-workshop-team.jpg" alt="Kompetensi Adaptabilitas" class=""></div></div>
-</div><div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="01" id="berpikir-kritis"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Berpikir Kritis &amp; Strategis"></a><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/workplace-change-editorial.webp" alt="Berpikir Kritis &amp; Strategis" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 01</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Berpikir Kritis &amp; Strategis</h3><div class="c-project-card__description | o-wysiwyg"><p>Mengevaluasi masalah, mempertanyakan asumsi, dan menentukan prioritas penerapan AI yang berdampak bagi organisasi.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
-<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="02" id="empati"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Empati &amp; Kebutuhan Manusia"></a><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/design-process-editorial.webp" alt="Empati &amp; Kebutuhan Manusia" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 02</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Empati &amp; Kebutuhan Manusia</h3><div class="c-project-card__description | o-wysiwyg"><p>Memahami kebutuhan pengguna dan tim sebelum merancang dan mengintegrasikan solusi teknologi terapan.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
-<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="03" id="literasi-ai"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Literasi AI"></a><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/leadership-editorial.webp" alt="Literasi AI" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 03</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Literasi AI</h3><div class="c-project-card__description | o-wysiwyg"><p>Memahami kemampuan, keterbatasan, dan risiko AI untuk mengambil keputusan adopsi yang bertanggung jawab.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
-<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="04" id="kepemimpinan"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Kepemimpinan"></a><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/professional-training.jpg" alt="Kepemimpinan" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 04</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Kepemimpinan</h3><div class="c-project-card__description | o-wysiwyg"><p>Mengarahkan kolaborasi lintas fungsi dan memandu perubahan pola kerja dalam implementasi AI.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
-<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="05" id="adaptabilitas"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Adaptabilitas"></a><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/professional-workshop-team.jpg" alt="Adaptabilitas" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 05</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Adaptabilitas</h3><div class="c-project-card__description | o-wysiwyg"><p>Menguji pendekatan baru secara iteratif, belajar dari umpan balik, dan menyempurnakan strategi bisnis.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
+</div><div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="01" id="berpikir-kritis"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Berpikir Kritis &amp; Strategis"></a><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 01</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/workplace-change-editorial.webp" alt="Berpikir Kritis &amp; Strategis" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Berpikir Kritis &amp; Strategis</h3><div class="c-project-card__description | o-wysiwyg"><p>Mengevaluasi masalah, mempertanyakan asumsi, dan menentukan prioritas penerapan AI yang berdampak bagi organisasi.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
+<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="02" id="empati"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Empati &amp; Kebutuhan Manusia"></a><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 02</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/design-process-editorial.webp" alt="Empati &amp; Kebutuhan Manusia" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Empati &amp; Kebutuhan Manusia</h3><div class="c-project-card__description | o-wysiwyg"><p>Memahami kebutuhan pengguna dan tim sebelum merancang dan mengintegrasikan solusi teknologi terapan.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
+<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="03" id="literasi-ai"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Literasi AI"></a><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 03</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/leadership-editorial.webp" alt="Literasi AI" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Literasi AI</h3><div class="c-project-card__description | o-wysiwyg"><p>Memahami kemampuan, keterbatasan, dan risiko AI untuk mengambil keputusan adopsi yang bertanggung jawab.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
+<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="04" id="kepemimpinan"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Kepemimpinan"></a><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 04</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/professional-training.jpg" alt="Kepemimpinan" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Kepemimpinan</h3><div class="c-project-card__description | o-wysiwyg"><p>Mengarahkan kolaborasi lintas fungsi dan memandu perubahan pola kerja dalam implementasi AI.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
+<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="05" id="adaptabilitas"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Adaptabilitas"></a><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 05</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/professional-workshop-team.jpg" alt="Adaptabilitas" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Adaptabilitas</h3><div class="c-project-card__description | o-wysiwyg"><p>Menguji pendekatan baru secara iteratif, belajar dari umpan balik, dan menyempurnakan strategi bisnis.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
 </div>
 <div class="c-home-projects__bottom-line-ctn"><div class="c-home-projects__bottom-line | u-bottom-line"></div></div></section><section class="c-home-projects__redirect" data-anim-wysiwyg><h2 class="c-home-projects__redirect-title">Pimpin perubahan. Bangun nilai bersama AI.</h2><div class="c-cta-ctn"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-cta">Daftar workshop ↗</a></div></section><section class="c-home-careers" id="fasilitator"><div class="c-home-careers__wrapper | o-wrapper --lg"><div class="c-image c-home-careers__image"><div class="c-image__wrapper"><img src="./assets/images/aranggi-real.jpg" alt="Aranggi Soemardjan - Founder Clevio" class="c-facilitator-img" onerror="this.onerror=null;this.src='./assets/images/clevio/aranggi-soemardjan.jpg';"></div></div><div class="c-home-careers__text"><div class="c-section-text" data-anim-wysiwyg><div class="c-section-text__surtitle | u-surtitle">FASILITATOR</div><div class="c-section-text__wysiwyg | o-wysiwyg">
 <h2>Aranggi Soemardjan</h2>
@@ -1807,20 +2245,78 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   </div>
 </section>
 
-<footer class="c-footer" id="kontak"><div class="c-footer__wrapper | o-wrapper --lg"><div class="c-footer__menus-copyright"><nav class="c-footer__menus"><ul class="c-footer-menu">
-<li class="c-footer-menu__item"><a href="#tentang" class="c-footer-menu__item-link">Tentang</a></li>
-<li class="c-footer-menu__item"><a href="#metode" class="c-footer-menu__item-link">Metode</a></li>
-<li class="c-footer-menu__item"><a href="#kompetensi" class="c-footer-menu__item-link">5 Kompetensi</a></li>
-<li class="c-footer-menu__item"><a href="#informasi" class="c-footer-menu__item-link">Informasi</a></li>
-<li class="c-footer-menu__item"><a href="#faq" class="c-footer-menu__item-link">FAQ</a></li>
-<li class="c-footer-menu__item"><a href="#fasilitator" class="c-footer-menu__item-link">Fasilitator</a></li>
-<li class="c-footer-menu__item"><a href="#galeri" class="c-footer-menu__item-link">Galeri</a></li>
-<li class="c-footer-menu__item"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-footer-menu__item-link">Daftar Workshop ↗</a></li>
-</ul></nav><div class="c-footer__copyright"><div class="c-footer__copyright-years">© 2026 Clevio AI Pro. Seluruh hak cipta dilindungi. PT Clevio Inovasi Indonesia.</div><div class="c-footer__copyright-agency">AI Thinking &amp; Innovation Workshop Series</div></div></div><div class="c-footer__infos"><div class="c-footer__infos-main">
-    <div class="c-footer__info"><div class="c-footer__info-label">Email</div><a href="mailto:halo@clevio.co" class="c-footer__info-link">halo@clevio.co</a></div>
-    <div class="c-footer__info"><div class="c-footer__info-label">WhatsApp</div><a href="https://wa.me/6281210878144?text=Halo%20Clevio,%20saya%20ingin%20berkonsultasi%20mengenai%20AI%20Thinking%20%26%20Innovation%20Workshop%20untuk%20tim%20organisasi%20kami.%20Mohon%20informasi%20format%20dan%20penawarannya." class="c-footer__info-link" target="_blank" rel="noopener noreferrer">+62 812-1087-8144</a></div>
-    <div class="c-footer__info"><div class="c-footer__info-label">Lokasi</div><span class="c-footer__info-link">Jakarta, Indonesia</span></div>
-</div></div><div class="c-footer__socials"><div class="c-footer__socials-label">Media sosial</div><ul class="c-footer__socials-group"><li class="c-footer__social"><a class="c-icon-btn --fa-classic fa-brands fa-whatsapp --white" href="https://wa.me/6281210878144?text=Halo%20Clevio,%20saya%20ingin%20berkonsultasi%20mengenai%20AI%20Thinking%20%26%20Innovation%20Workshop%20untuk%20tim%20organisasi%20kami.%20Mohon%20informasi%20format%20dan%20penawarannya." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Clevio"></a></li><li class="c-footer__social"><a class="c-icon-btn --fa-classic fa-brands fa-instagram --white" href="https://www.instagram.com/cleviopro/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Clevio"></a></li><li class="c-footer__social"><a class="c-icon-btn --fa-classic fa-brands fa-linkedin-in --white" href="https://www.linkedin.com/company/clevio/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Clevio"></a></li></ul></div></div></div></div><div class="c-footer__logo"><img src="./assets/images/clevio-ai-pro-logo-white.png" alt="Clevio AI Pro" class="c-footer__logo-img" /></div></footer><div class="c-overlay c-dynamic-content-overlay" ><div class="c-overlay__scroller-container"><div class="c-overlay__scroller" data-lenis-prevent><div class="c-overlay__content-container"><div class="c-overlay__content | c-dynamic-content-overlay__content | o-wrapper --sm"></div></div></div><button class="c-icon-btn --close --red | c-overlay__close-button" aria-label="Fermer" c-overlay__close-button></button></div></div><div class="c-transition-overlay"><div class="c-transition-overlay__inner"></div><div class="c-transition-overlay__inner-logo"><img src="./assets/images/clevio-ai-pro-logo-white.png" alt="Clevio AI Pro" /></div></div>
+<footer class="c-footer" id="kontak">
+  <div class="c-footer__wrapper | o-wrapper --lg">
+    <div class="c-footer-grid">
+      <!-- Col 1: Brand & Identity -->
+      <div class="c-footer-col --brand">
+        <div class="c-footer-brand-logo">
+          <img src="./assets/images/clevio-ai-pro-logo-white.png" alt="Clevio AI Pro" class="c-footer-brand-img" />
+        </div>
+        <p class="c-footer-brand-desc">Workshop satu hari bagi pemimpin dan profesional untuk mengubah potensi AI menjadi keputusan dan rencana aksi nyata bagi organisasi.</p>
+        <div class="c-footer-brand-org">PT Clevio Inovasi Indonesia</div>
+        <div class="c-footer-socials-row">
+          <a href="https://wa.me/6281210878144?text=Halo%20Clevio,%20saya%20ingin%20berkonsultasi%20mengenai%20AI%20Thinking%20%26%20Innovation%20Workshop%20untuk%20tim%20organisasi%20kami.%20Mohon%20informasi%20format%20dan%20penawarannya." target="_blank" rel="noopener noreferrer" class="c-footer-social-btn" aria-label="WhatsApp Clevio"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/company/clevio/" target="_blank" rel="noopener noreferrer" class="c-footer-social-btn" aria-label="LinkedIn Clevio"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/cleviopro/" target="_blank" rel="noopener noreferrer" class="c-footer-social-btn" aria-label="Instagram Clevio"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Program Navigation -->
+      <div class="c-footer-col">
+        <div class="c-footer-col-header">PROGRAM</div>
+        <ul class="c-footer-nav-list">
+          <li><a href="#tentang" class="c-footer-nav-link">Tentang Workshop</a></li>
+          <li><a href="#metode" class="c-footer-nav-link">3 Tahap Metode</a></li>
+          <li><a href="#kompetensi" class="c-footer-nav-link">5 Kompetensi Teruji</a></li>
+          <li><a href="#metode" class="c-footer-nav-link">Format Flipped Learning</a></li>
+          <li><a href="#arah" class="c-footer-nav-link">3 Arah Pengembangan</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Informasi & Logistik -->
+      <div class="c-footer-col">
+        <div class="c-footer-col-header">INFORMASI</div>
+        <ul class="c-footer-nav-list">
+          <li><a href="#informasi" class="c-footer-nav-link">Jadwal &amp; Format</a></li>
+          <li><a href="#informasi" class="c-footer-nav-link">Investasi Program</a></li>
+          <li><a href="#fasilitator" class="c-footer-nav-link">Profil Fasilitator</a></li>
+          <li><a href="#faq" class="c-footer-nav-link">Pertanyaan Umum (FAQ)</a></li>
+          <li><a href="#galeri" class="c-footer-nav-link">Galeri Dokumentasi</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Konsultasi & Pendaftaran -->
+      <div class="c-footer-col --cta">
+        <div class="c-footer-col-header">KONSULTASI &amp; DAFTAR</div>
+        <p class="c-footer-cta-text">Daftarkan tim atau diskusikan kebutuhan kustomisasi program untuk organisasi Anda.</p>
+        <div class="c-footer-contact-items">
+          <div class="c-footer-contact-item">
+            <span class="c-footer-contact-label">Email:</span>
+            <a href="mailto:halo@clevio.co" class="c-footer-contact-val">halo@clevio.co</a>
+          </div>
+          <div class="c-footer-contact-item">
+            <span class="c-footer-contact-label">WhatsApp:</span>
+            <a href="https://wa.me/6281210878144?text=Halo%20Clevio,%20saya%20ingin%20berkonsultasi%20mengenai%20AI%20Thinking%20%26%20Innovation%20Workshop%20untuk%20tim%20organisasi%20kami.%20Mohon%20informasi%20format%20dan%20penawarannya." target="_blank" rel="noopener noreferrer" class="c-footer-contact-val">+62 812-1087-8144</a>
+          </div>
+        </div>
+        <div class="c-footer-btn-wrapper">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-cta --sm" aria-label="Daftar Workshop">Daftar Workshop ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Line / Subfooter -->
+    <div class="c-footer-bottom">
+      <div class="c-footer-bottom-left">
+        &copy; 2026 Clevio AI Pro · PT Clevio Inovasi Indonesia. Seluruh hak cipta dilindungi.
+      </div>
+      <div class="c-footer-bottom-right">
+        Jakarta, Indonesia · AI Thinking &amp; Innovation Series
+      </div>
+    </div>
+  </div>
+</footer><div class="c-overlay c-dynamic-content-overlay" ><div class="c-overlay__scroller-container"><div class="c-overlay__scroller" data-lenis-prevent><div class="c-overlay__content-container"><div class="c-overlay__content | c-dynamic-content-overlay__content | o-wrapper --sm"></div></div></div><button class="c-icon-btn --close --red | c-overlay__close-button" aria-label="Fermer" c-overlay__close-button></button></div></div><div class="c-transition-overlay"><div class="c-transition-overlay__inner"></div><div class="c-transition-overlay__inner-logo"><img src="./assets/images/clevio-ai-pro-logo-white.png" alt="Clevio AI Pro" /></div></div>
   </div>
   
     
