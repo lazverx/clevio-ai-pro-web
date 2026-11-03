@@ -1115,21 +1115,75 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     }
   }
 
-  /* ITEM 1: DESKTOP TOMBOL 1-5 NAVIGATION - NO OVERLAP WITH 'LIMA' */
+  /* ITEM 1: DESKTOP TOMBOL 1-5 NAVIGATION & SOLID PRECISE COMPETENCY CARD */
   @media (min-width: 992px) {
+    /* Remove the Montarville background cutout masks so there is NO lighter halo / putih-putih behind the card */
+    .c-home-projects__card-wrapper {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+    .c-home-projects__card-bg.--left,
+    .c-home-projects__card-bg.--right,
+    .c-home-projects__card-bg.--top,
+    .c-home-projects__card-bg.--bottom {
+      display: none !important;
+      background-color: transparent !important;
+    }
+    .c-home-projects__card-bg.--top-bottom {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: auto !important;
+      height: 100% !important;
+      background-color: transparent !important;
+    }
+    .c-home-projects__cards-images:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(18, 18, 18, 0.35);
+      pointer-events: none;
+      z-index: 2;
+    }
     .c-project-card__mobile-thumb-wrapper,
     .c-project-card__inner-sides {
       display: none !important;
     }
+    /* Solid, clean executive card matching exact content size with rounded corners & shadow */
     .c-project-card {
-      padding: 2.2rem 2.2rem 1.8rem 2.2rem !important;
-      max-width: 460px !important;
+      position: relative !important;
+      background-color: #FAFAFA !important;
+      border-radius: 16px !important;
+      padding: 2.2rem 2.2rem 2rem 2.2rem !important;
+      width: 440px !important;
+      max-width: 90vw !important;
       height: auto !important;
       min-height: auto !important;
+      box-sizing: border-box !important;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45) !important;
+      outline: none !important;
+      margin: 0 auto !important;
+      z-index: 10 !important;
     }
     .c-project-card__inner {
+      background: transparent !important;
+      padding: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
       gap: 1.25rem !important;
       height: auto !important;
+    }
+    .c-project-card__category {
+      background: transparent !important;
+      padding: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .c-project-card__info {
+      background: transparent !important;
+      padding: 0 !important;
     }
     .c-home-projects__cards-nav-container {
       position: absolute !important;
@@ -1255,7 +1309,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     .c-trust-deliverables-strip {
       min-height: auto !important;
       height: auto !important;
-      margin: 1.5rem clamp(16px, 4vw, 24px) 2rem clamp(16px, 4vw, 24px) !important;
+      margin: 1.5rem 0 2rem 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
       padding: 1.4rem 1.25rem !important;
       border-radius: 14px !important;
       background: #141414 !important;
@@ -1965,48 +2021,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <path d="M769 768C769 555.37 597.077 383 385 383C172.923 383 1 555.37 1 768" stroke="#121212"/>
 <line x1="384.51" y1="767.902" x2="537.51" y2="0.902145" stroke="#121212"/>
 </svg>
-</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a>
-      <div class="c-method-step-badge"><span class="c-method-step-dot"></span> Tahap 01</div>
-      <h3 class="c-expertise-card__title">01 Pahami Konteks Bisnis</h3>
-      <div class="c-expertise-card__info">
-        <div class="c-expertise-card__description | o-wysiwyg">
-          <p>Mengidentifikasi kebutuhan, tantangan, dan peluang nyata organisasi Anda. Peserta membawa satu tantangan nyata dari tempat kerja sebagai bahan utama workshop.</p>
-        </div>
-        <div class="c-method-output-box">
-          <div class="c-method-output-label">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D0112B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            TARGET KELUARAN
-          </div>
-          <div class="c-method-output-text">Problem Statement &amp; Business Case yang jelas</div>
-        </div>
-        <div class="c-method-card-footer">
-          <span class="c-method-card-action">Pelajari format workshop</span>
-          <div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div>
-        </div>
-      </div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>02</span> / 04</div><article class="c-expertise-card --b" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="768" height="768" viewBox="0 0 768 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a><h3 class="c-expertise-card__title">01 Pahami konteks bisnis</h3><div class="c-expertise-card__info"><div class="c-expertise-card__description | o-wysiwyg"><p>Mengidentifikasi kebutuhan, tantangan, dan peluang nyata organisasi Anda. Peserta membawa satu tantangan nyata dari tempat kerja sebagai bahan utama workshop.<br><strong style="color:#D0112B">Output: Problem Statement yang jelas</strong></p></div><div class="c-icon-btn --arrow-bottom-right --red" aria-hidden="true"></div></div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>02</span> / 04</div><article class="c-expertise-card --b" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="768" height="768" viewBox="0 0 768 768" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M65.9355 384.379C153.466 471.909 295.71 471.584 383.647 383.646C471.585 295.709 471.91 153.465 384.38 65.9346C296.85 -21.5955 154.605 -21.2704 66.668 66.667C-21.2693 154.604 -21.5945 296.849 65.9355 384.379Z" stroke="#121212"/>
 <path d="M383.623 702.065C471.153 789.595 613.398 789.27 701.335 701.333C789.272 613.396 789.597 471.151 702.067 383.621C614.537 296.091 472.293 296.416 384.355 384.354C296.418 472.291 296.093 614.535 383.623 702.065Z" stroke="#121212"/>
 <line y1="-0.5" x2="449.277" y2="-0.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 225.402 225.401)" stroke="#121212"/>
 </svg>
-</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a>
-      <div class="c-method-step-badge"><span class="c-method-step-dot"></span> Tahap 02</div>
-      <h3 class="c-expertise-card__title">02 Design Thinking + AI</h3>
-      <div class="c-expertise-card__info">
-        <div class="c-expertise-card__description | o-wysiwyg">
-          <p>Merancang alternatif solusi yang berpusat pada manusia dengan dukungan kapabilitas AI. Gagasan diuji sejak awal agar arah solusi tetap relevan dengan kebutuhan pengguna.</p>
-        </div>
-        <div class="c-method-output-box">
-          <div class="c-method-output-label">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D0112B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            TARGET KELUARAN
-          </div>
-          <div class="c-method-output-text">AI Opportunity Map &amp; Prioritas Solusi</div>
-        </div>
-        <div class="c-method-card-footer">
-          <span class="c-method-card-action">Pelajari format workshop</span>
-          <div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div>
-        </div>
-      </div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>03</span> / 04</div><article class="c-expertise-card --c" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="768" height="768" viewBox="0 0 768 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a><h3 class="c-expertise-card__title">02 Design Thinking + AI</h3><div class="c-expertise-card__info"><div class="c-expertise-card__description | o-wysiwyg"><p>Merancang alternatif solusi yang berpusat pada manusia dengan dukungan kapabilitas AI. Gagasan diuji sejak awal agar arah solusi tetap relevan dengan kebutuhan pengguna.<br><strong style="color:#D0112B">Output: AI Opportunity Map terprioritas</strong></p></div><div class="c-icon-btn --arrow-bottom-right --red" aria-hidden="true"></div></div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>03</span> / 04</div><article class="c-expertise-card --c" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="768" height="768" viewBox="0 0 768 768" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_4711_23527)">
 <line x1="77.9991" y1="383.5" x2="689.999" y2="383.5" stroke="#121212"/>
 <path d="M385.047 0.500977C324.49 0.726059 263.794 38.3035 217.373 113.359C170.951 188.416 147.64 286.68 147.5 384.884C147.361 483.088 170.393 581.178 216.601 655.89C262.808 730.599 323.395 767.724 383.951 767.499C444.509 767.274 505.204 729.697 551.625 654.641C598.047 579.584 621.359 481.32 621.498 383.116C621.638 284.912 598.606 186.822 552.398 112.11C506.19 37.4007 445.603 0.275906 385.047 0.500977Z" stroke="#121212"/>
@@ -2018,49 +2038,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </clipPath>
 </defs>
 </svg>
-</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a>
-      <div class="c-method-step-badge"><span class="c-method-step-dot"></span> Tahap 03</div>
-      <h3 class="c-expertise-card__title">03 Validasi & Rencana Aksi</h3>
-      <div class="c-expertise-card__info">
-        <div class="c-expertise-card__description | o-wysiwyg">
-          <p>Menguji asumsi, menyempurnakan pendekatan, dan menyusun roadmap implementasi. Setiap peserta pulang dengan langkah kerja yang siap dijalankan.</p>
-        </div>
-        <div class="c-method-output-box">
-          <div class="c-method-output-label">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D0112B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            TARGET KELUARAN
-          </div>
-          <div class="c-method-output-text">Action Plan Terukur &amp; Matriks Eksekusi</div>
-        </div>
-        <div class="c-method-card-footer">
-          <span class="c-method-card-action">Pelajari format workshop</span>
-          <div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div>
-        </div>
-      </div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>04</span> / 04</div><article class="c-expertise-card --d" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="968" height="768" viewBox="0 0 968 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a><h3 class="c-expertise-card__title">03 Validasi & rencana aksi</h3><div class="c-expertise-card__info"><div class="c-expertise-card__description | o-wysiwyg"><p>Menguji asumsi, menyempurnakan pendekatan, dan menyusun roadmap implementasi. Setiap peserta pulang dengan langkah kerja yang siap dijalankan.<br><strong style="color:#D0112B">Output: Action Plan Awal yang terukur</strong></p></div><div class="c-icon-btn --arrow-bottom-right --red" aria-hidden="true"></div></div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>04</span> / 04</div><article class="c-expertise-card --d" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="968" height="768" viewBox="0 0 968 768" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="725.31" cy="383.762" r="241.27" stroke="#121212"/>
   <circle cx="483.54" cy="525.754" r="241.27" stroke="#121212"/>
   <circle cx="241.77" cy="383.762" r="241.27" stroke="#121212"/>
   <circle cx="483.54" cy="241.77" r="241.27" stroke="#121212"/>
 </svg>
-</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a>
-      <div class="c-method-step-badge"><span class="c-method-step-dot"></span> Metodologi Unggulan</div>
-      <h3 class="c-expertise-card__title">Format Flipped Learning · 1 Hari</h3>
-      <div class="c-expertise-card__info">
-        <div class="c-expertise-card__description | o-wysiwyg">
-          <p>1 hari intensif praktik langsung berbasis kasus nyata organisasi. Materi dipelajari lebih awal, sehingga waktu workshop difokuskan sepenuhnya untuk diskusi strategis, eksplorasi solusi, dan penyusunan action plan.</p>
-        </div>
-        <div class="c-method-output-box">
-          <div class="c-method-output-label">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D0112B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            TARGET KELUARAN
-          </div>
-          <div class="c-method-output-text">Efisiensi Maksimal: 80% Diskusi &amp; Praktik Nyata</div>
-        </div>
-        <div class="c-method-card-footer">
-          <span class="c-method-card-action">Pelajari format workshop</span>
-          <div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div>
-        </div>
-      </div></div></div></article></div></div></div></section><section class="c-home-projects" id="kompetensi"><div class="c-home-projects__wrapper | o-wrapper --lg"><h2 class="c-home-projects__title"><span class="c-home-projects__title --left">Lima</span><span class="c-home-projects__title --right">kompetensi</span></h2></div><div class="c-home-projects__cards"><div class="c-home-projects__cards-overlay-container"><div class="c-home-projects__cards-overlay"><div class="c-home-projects__cards-circles"><div class="c-home-projects__cards-circle --left" data-generic-opacity></div><div class="c-home-projects__cards-circle --right" data-generic-opacity></div></div><div class="c-home-projects__cards-nav-container"><div class="c-home-projects__cards-nav">
+</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a><h3 class="c-expertise-card__title">Format Flipped Learning · 1 Hari</h3><div class="c-expertise-card__info"><div class="c-expertise-card__description | o-wysiwyg"><p>1 hari intensif praktik langsung berbasis kasus nyata organisasi. Materi dipelajari lebih awal, sehingga waktu workshop difokuskan sepenuhnya untuk diskusi strategis, eksplorasi solusi, dan penyusunan action plan.<br><strong style="color:#D0112B">Fokus: Diskusi interaktif &amp; kerja nyata</strong></p></div><div class="c-icon-btn --arrow-bottom-right --red" aria-hidden="true"></div></div></div></div></article></div></div></div></section><section class="c-home-projects" id="kompetensi"><div class="c-home-projects__wrapper | o-wrapper --lg"><h2 class="c-home-projects__title"><span class="c-home-projects__title --left">Lima</span><span class="c-home-projects__title --right">kompetensi</span></h2></div><div class="c-home-projects__cards"><div class="c-home-projects__cards-overlay-container"><div class="c-home-projects__cards-overlay"><div class="c-home-projects__cards-circles"><div class="c-home-projects__cards-circle --left" data-generic-opacity></div><div class="c-home-projects__cards-circle --right" data-generic-opacity></div></div><div class="c-home-projects__cards-nav-container"><div class="c-home-projects__cards-nav">
   <a href="#berpikir-kritis" class="c-home-projects__cards-nav-link --active" data-project-index="01" aria-label="Ke kompetensi 01">01</a>
   <a href="#empati" class="c-home-projects__cards-nav-link" data-project-index="02" aria-label="Ke kompetensi 02">02</a>
   <a href="#literasi-ai" class="c-home-projects__cards-nav-link" data-project-index="03" aria-label="Ke kompetensi 03">03</a>
