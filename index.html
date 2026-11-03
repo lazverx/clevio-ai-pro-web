@@ -829,6 +829,401 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     color: rgba(250, 250, 250, 0.6);
     font-family: General Sans, sans-serif;
   }
+
+  /* ============================================================= */
+  /* GELOMBANG 3: STRICT WORDPRESS-STYLE MOBILE RESPONSIVE ENGINE  */
+  /* (Strictly scoped under media queries - Desktop 100% untouched) */
+  /* ============================================================= */
+  
+  /* Global asset placeholder & image visibility guarantees */
+  img {
+    background-color: #1a1a1a;
+  }
+  .c-media__overlay {
+    display: none !important;
+  }
+  .c-image img, 
+  .c-image__wrapper img,
+  .c-home-careers__image img,
+  .c-home-about__image img,
+  .c-home-sustainable__image img {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Desktop-only scoping for mobile thumb */
+  @media (min-width: 992px) {
+    .c-project-card__mobile-thumb-wrapper {
+      display: none !important;
+    }
+  }
+
+  /* Tablet & Mobile Layout (< 992px) */
+  @media (max-width: 991px) {
+    html, body {
+      overflow-x: hidden !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    /* Section 1: Konteks Perubahan (c-home-about) */
+    .c-home-about {
+      padding: clamp(44px, 7vh, 64px) 0 !important;
+    }
+    .c-home-about__title {
+      font-size: clamp(1.85rem, 5.5vw, 2.5rem) !important;
+      line-height: 1.15 !important;
+      margin-bottom: 1.5rem !important;
+    }
+    .c-home-about__image {
+      float: none !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 1.5rem 0 !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+    }
+    .c-home-about__image img {
+      width: 100% !important;
+      height: auto !important;
+      max-height: 380px !important;
+      object-fit: cover !important;
+      border-radius: 14px !important;
+      display: block !important;
+    }
+    .c-home-about__text {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .c-home-about__text p {
+      font-size: 1rem !important;
+      line-height: 1.6 !important;
+      color: rgba(250, 250, 250, 0.75) !important;
+    }
+
+    /* Section 2: 3 Arah Pengembangan (c-home-target) */
+    .c-home-target {
+      padding: clamp(44px, 7vh, 64px) 0 !important;
+    }
+    .c-home-target__title-wrapper {
+      height: auto !important;
+      margin-bottom: 1.5rem !important;
+    }
+    .c-home-target__title {
+      font-size: clamp(1.85rem, 5.5vw, 2.5rem) !important;
+      line-height: 1.15 !important;
+      padding-bottom: 0.5rem !important;
+      margin-bottom: 0 !important;
+      height: auto !important;
+    }
+    .c-home-target__title .u-word {
+      transform: none !important;
+    }
+    .c-home-target__separator {
+      position: relative !important;
+      bottom: auto !important;
+      margin-top: 1.25rem !important;
+      margin-bottom: 1.75rem !important;
+      width: 100% !important;
+      display: block !important;
+    }
+    .c-home-target__cards {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.25rem !important;
+    }
+    .c-home-target__card {
+      width: 100% !important;
+      margin-bottom: 0 !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+    }
+
+    /* Section 3: Metode Workshop (c-home-expertises) */
+    .c-home-expertises {
+      padding: clamp(44px, 7vh, 64px) 0 !important;
+    }
+    .c-method-title {
+      font-size: clamp(1.85rem, 5.5vw, 2.5rem) !important;
+      line-height: 1.15 !important;
+    }
+    .c-home-expertises__cards {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.25rem !important;
+    }
+    .c-home-expertises__card-container {
+      width: 100% !important;
+      margin-bottom: 0 !important;
+    }
+    .c-expertise-card {
+      background: #181818 !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 14px !important;
+      padding: 1.5rem !important;
+      overflow: hidden !important;
+    }
+    .c-expertise-card__bg {
+      display: none !important;
+    }
+    .c-expertise-card__title {
+      font-size: 1.35rem !important;
+      line-height: 1.25 !important;
+    }
+    .c-expertise-card .c-icon-btn {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+    }
+    .c-expertise-card .u-word {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    .c-expertise-card [data-split-text-inner] {
+      transform: none !important;
+    }
+
+    /* Section 4: Lima Kompetensi (c-home-projects) - ZERO DEAD SCROLL */
+    .c-home-projects {
+      min-height: auto !important;
+      height: auto !important;
+      padding: clamp(44px, 7vh, 64px) 0 !important;
+      position: relative !important;
+    }
+    .c-home-projects__wrapper {
+      margin-bottom: 1.5rem !important;
+    }
+    .c-home-projects__title {
+      font-size: clamp(2.0rem, 5.5vw, 2.6rem) !important;
+      line-height: 1.15 !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: baseline !important;
+      gap: 0.45rem !important;
+      width: 100% !important;
+    }
+    .c-home-projects__title .--left,
+    .c-home-projects__title .--right {
+      position: static !important;
+      display: inline-block !important;
+      transform: none !important;
+      text-align: left !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .c-project-card__category {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .c-project-card__category-name {
+      font-family: 'Sono Proportional', monospace !important;
+      font-size: 0.78rem !important;
+      font-weight: 600 !important;
+      color: #D0112B !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      opacity: 1 !important;
+    }
+    .c-project-card__category-circle {
+      width: 6px !important;
+      height: 6px !important;
+      background-color: #D0112B !important;
+      border-radius: 50% !important;
+    }
+    .c-home-projects__cards {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.25rem !important;
+      height: auto !important;
+      min-height: auto !important;
+    }
+    .c-home-projects__cards-images {
+      display: none !important;
+    }
+    .c-home-projects__cards-overlay-container {
+      display: none !important;
+    }
+    .c-home-projects__cards-nav {
+      display: none !important;
+    }
+    .c-home-projects__card-container {
+      display: block !important;
+      height: auto !important;
+      min-height: auto !important;
+      margin: 0 0 20px 0 !important;
+      padding: 0 clamp(16px, 4vw, 24px) !important;
+      box-sizing: border-box !important;
+      position: relative !important;
+    }
+    .c-home-projects__card-wrapper {
+      display: block !important;
+      height: auto !important;
+      min-height: auto !important;
+      width: 100% !important;
+    }
+    .c-home-projects__card-bg.--top-bottom {
+      display: block !important;
+      height: auto !important;
+      position: relative !important;
+      width: 100% !important;
+    }
+    .c-home-projects__card-bg.--left,
+    .c-home-projects__card-bg.--right,
+    .c-home-projects__card-bg.--top,
+    .c-home-projects__card-bg.--bottom {
+      display: none !important;
+    }
+    .c-project-card {
+      position: relative !important;
+      inset: auto !important;
+      transform: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      height: auto !important;
+      min-height: auto !important;
+      background: #181818 !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 14px !important;
+      padding: 1.5rem !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .c-project-card__inner {
+      position: relative !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .c-project-card__mobile-thumb-wrapper {
+      display: block !important;
+      width: 100% !important;
+      margin-bottom: 1rem !important;
+      border-radius: 10px !important;
+      overflow: hidden !important;
+      aspect-ratio: 16 / 10 !important;
+      background: #202020 !important;
+    }
+    .c-project-card__mobile-thumb {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    .c-project-card__category {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      font-family: 'Sono Proportional', monospace !important;
+      font-size: 0.75rem !important;
+      font-weight: 600 !important;
+      color: #D0112B !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .c-project-card__title {
+      font-family: General Sans, sans-serif !important;
+      font-size: 1.35rem !important;
+      line-height: 1.25 !important;
+      font-weight: 600 !important;
+      color: #FAFAFA !important;
+      margin: 0 0 0.65rem 0 !important;
+    }
+    .c-project-card__description p {
+      font-size: 0.92rem !important;
+      line-height: 1.55 !important;
+      color: rgba(250, 250, 250, 0.72) !important;
+      margin: 0 !important;
+    }
+    .c-home-projects__bottom-line-ctn {
+      display: none !important;
+    }
+    .c-home-projects__redirect {
+      margin-top: 1.5rem !important;
+      padding: 1.5rem !important;
+      border-radius: 14px !important;
+      background: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+
+    /* Section 5: Fasilitator Aranggi Soemardjan (c-home-careers) */
+    .c-home-careers {
+      padding: clamp(44px, 7vh, 64px) 0 !important;
+    }
+    .c-home-careers__wrapper {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.75rem !important;
+    }
+    .c-home-careers__image {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+    }
+    .c-home-careers__image img,
+    .c-facilitator-img {
+      width: 100% !important;
+      height: auto !important;
+      max-height: 380px !important;
+      object-fit: cover !important;
+      border-radius: 14px !important;
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    .c-home-careers__text {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .c-home-careers__text h2 {
+      font-size: clamp(1.85rem, 5.5vw, 2.5rem) !important;
+      line-height: 1.15 !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .c-home-careers__text p {
+      font-size: 0.95rem !important;
+      line-height: 1.6 !important;
+      color: rgba(250, 250, 250, 0.75) !important;
+    }
+
+    /* Section 6: Prinsip & Komitmen (c-home-sustainable) */
+    .c-home-sustainable {
+      padding: clamp(44px, 7vh, 64px) 0 !important;
+    }
+    .c-home-sustainable__title {
+      font-size: clamp(1.85rem, 5.5vw, 2.5rem) !important;
+      line-height: 1.15 !important;
+    }
+
+    /* Logistics & FAQ sections */
+    .c-workshop-info-section,
+    .c-faq-section,
+    .c-closing-cta-section {
+      padding: clamp(44px, 7vh, 64px) 0 !important;
+    }
+    .c-info-title,
+    .c-faq-title,
+    .c-closing-cta-title {
+      font-size: clamp(1.85rem, 5.5vw, 2.5rem) !important;
+      line-height: 1.15 !important;
+    }
+
+    /* Minimum 44px tap targets */
+    .c-cta,
+    .c-faq-item summary,
+    .c-header__link,
+    .c-main-menu__item-link {
+      min-height: 44px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+    }
+  }
+
 </style>
 </head>
 
@@ -997,12 +1392,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   <div class="c-image c-home-projects__card-image" data-project-index="03"><div class="c-image__wrapper"><img src="./assets/images/clevio/leadership-editorial.webp" alt="Kompetensi Literasi AI" class=""></div></div>
   <div class="c-image c-home-projects__card-image" data-project-index="04"><div class="c-image__wrapper"><img src="./assets/images/clevio/professional-training.jpg" alt="Kompetensi Kepemimpinan" class=""></div></div>
   <div class="c-image c-home-projects__card-image" data-project-index="05"><div class="c-image__wrapper"><img src="./assets/images/clevio/professional-workshop-team.jpg" alt="Kompetensi Adaptabilitas" class=""></div></div>
-</div></div></div><div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="01" id="berpikir-kritis"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Berpikir Kritis &amp; Strategis"></a><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 01</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Berpikir Kritis &amp; Strategis</h3><div class="c-project-card__description | o-wysiwyg"><p>Mengevaluasi masalah, mempertanyakan asumsi, dan menentukan prioritas penerapan AI yang berdampak bagi organisasi.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
-<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="02" id="empati"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Empati &amp; Kebutuhan Manusia"></a><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 02</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Empati &amp; Kebutuhan Manusia</h3><div class="c-project-card__description | o-wysiwyg"><p>Memahami kebutuhan pengguna dan tim sebelum merancang dan mengintegrasikan solusi teknologi terapan.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
-<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="03" id="literasi-ai"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Literasi AI"></a><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 03</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Literasi AI</h3><div class="c-project-card__description | o-wysiwyg"><p>Memahami kemampuan, keterbatasan, dan risiko AI untuk mengambil keputusan adopsi yang bertanggung jawab.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
-<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="04" id="kepemimpinan"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Kepemimpinan"></a><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 04</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Kepemimpinan</h3><div class="c-project-card__description | o-wysiwyg"><p>Mengarahkan kolaborasi lintas fungsi dan memandu perubahan pola kerja dalam implementasi AI.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
-<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="05" id="adaptabilitas"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Adaptabilitas"></a><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 05</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Adaptabilitas</h3><div class="c-project-card__description | o-wysiwyg"><p>Menguji pendekatan baru secara iteratif, belajar dari umpan balik, dan menyempurnakan strategi bisnis.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
-<div class="c-home-projects__bottom-line-ctn"><div class="c-home-projects__bottom-line | u-bottom-line"></div></div></section><section class="c-home-projects__redirect" data-anim-wysiwyg><h2 class="c-home-projects__redirect-title">Pimpin perubahan. Bangun nilai bersama AI.</h2><div class="c-cta-ctn"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-cta">Daftar workshop ↗</a></div></section><section class="c-home-careers" id="fasilitator"><div class="c-home-careers__wrapper | o-wrapper --lg"><div class="c-image | c-home-careers__image" data-media-reveal><div class="c-image__wrapper"><img src="./assets/images/clevio/aranggi-soemardjan.jpg" data-src="./assets/images/clevio/aranggi-soemardjan.jpg" data-sizes="(max-width: 749px) 100vw, 50vw" width="1000" height="667" style="aspect-ratio:2500/1667"  alt="Ilustrasi suasana workshop Clevio AI Pro" class="lazyload"></div></div><div class="c-home-careers__text"><div class="c-section-text" data-anim-wysiwyg><div class="c-section-text__surtitle | u-surtitle">FASILITATOR</div><div class="c-section-text__wysiwyg | o-wysiwyg">
+</div></div></div><div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="01" id="berpikir-kritis"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Berpikir Kritis &amp; Strategis"></a><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/workplace-change-editorial.webp" alt="Berpikir Kritis &amp; Strategis" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 01</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Berpikir Kritis &amp; Strategis</h3><div class="c-project-card__description | o-wysiwyg"><p>Mengevaluasi masalah, mempertanyakan asumsi, dan menentukan prioritas penerapan AI yang berdampak bagi organisasi.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
+<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="02" id="empati"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Empati &amp; Kebutuhan Manusia"></a><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/design-process-editorial.webp" alt="Empati &amp; Kebutuhan Manusia" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 02</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Empati &amp; Kebutuhan Manusia</h3><div class="c-project-card__description | o-wysiwyg"><p>Memahami kebutuhan pengguna dan tim sebelum merancang dan mengintegrasikan solusi teknologi terapan.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
+<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="03" id="literasi-ai"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Literasi AI"></a><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/leadership-editorial.webp" alt="Literasi AI" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 03</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Literasi AI</h3><div class="c-project-card__description | o-wysiwyg"><p>Memahami kemampuan, keterbatasan, dan risiko AI untuk mengambil keputusan adopsi yang bertanggung jawab.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
+<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="04" id="kepemimpinan"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Kepemimpinan"></a><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/professional-training.jpg" alt="Kepemimpinan" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 04</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Kepemimpinan</h3><div class="c-project-card__description | o-wysiwyg"><p>Mengarahkan kolaborasi lintas fungsi dan memandu perubahan pola kerja dalam implementasi AI.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
+<div class="c-home-projects__card-container"><div class="c-home-projects__card-wrapper"><div class="c-home-projects__card-bg --left"></div><div class="c-home-projects__card-bg --top-bottom"><div class="c-home-projects__card-bg --top"></div><article class="c-project-card" data-project-index="05" id="adaptabilitas"><div class="c-project-card__inner"><a href="#kompetensi" class="c-project-card__link" aria-label="Lihat Adaptabilitas"></a><div class="c-project-card__mobile-thumb-wrapper"><img src="./assets/images/clevio/professional-workshop-team.jpg" alt="Adaptabilitas" class="c-project-card__mobile-thumb" loading="lazy"></div><div class="c-project-card__category"><span class="c-project-card__category-name">Kompetensi 05</span><div class="c-project-card__category-circle" aria-hidden="true"></div></div><div class="c-project-card__inner-sides"><div class="c-project-card__inner-side"></div><div class="c-project-card__inner-side"></div></div><div class="c-project-card__info"><h3 class="c-project-card__title">Adaptabilitas</h3><div class="c-project-card__description | o-wysiwyg"><p>Menguji pendekatan baru secara iteratif, belajar dari umpan balik, dan menyempurnakan strategi bisnis.</p></div><div class="c-project-card__redirect-container"><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article><div class="c-home-projects__card-bg --bottom"></div></div><div class="c-home-projects__card-bg --right"></div></div></div>
+<div class="c-home-projects__bottom-line-ctn"><div class="c-home-projects__bottom-line | u-bottom-line"></div></div></section><section class="c-home-projects__redirect" data-anim-wysiwyg><h2 class="c-home-projects__redirect-title">Pimpin perubahan. Bangun nilai bersama AI.</h2><div class="c-cta-ctn"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-cta">Daftar workshop ↗</a></div></section><section class="c-home-careers" id="fasilitator"><div class="c-home-careers__wrapper | o-wrapper --lg"><div class="c-image c-home-careers__image"><div class="c-image__wrapper"><img src="./assets/images/aranggi-real.jpg" alt="Aranggi Soemardjan - Founder Clevio" class="c-facilitator-img" onerror="this.onerror=null;this.src='./assets/images/clevio/aranggi-soemardjan.jpg';"></div></div><div class="c-home-careers__text"><div class="c-section-text" data-anim-wysiwyg><div class="c-section-text__surtitle | u-surtitle">FASILITATOR</div><div class="c-section-text__wysiwyg | o-wysiwyg">
 <h2>Aranggi Soemardjan</h2>
 <p><strong style="color:#D0112B">Founder Clevio · Inovator dan Praktisi Teknologi</strong></p>
 <p>Membangun Clevio sejak 2013 dengan fokus pada human-centered technology, inovasi pendidikan, dan penerapan AI praktis. Berpengalaman memimpin transformasi digital dan membimbing para pemimpin organisasi menerjemahkan peluang teknologi mutakhir menjadi kapabilitas nyata yang berdampak.</p>
