@@ -861,108 +861,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     visibility: visible !important;
   }
 
-  /* ITEM 4 (DESKTOP & MOBILE): ENHANCED METODE WORKSHOP CARDS */
-  .c-expertise-card {
-    background: linear-gradient(150deg, #1b1b1d 0%, #121213 100%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 14px !important;
-    padding: clamp(1.2rem, 2.2vw, 1.8rem) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    position: relative !important;
-    overflow: hidden !important;
-    box-sizing: border-box !important;
-  }
-  .c-expertise-card:hover {
-    border-color: rgba(208, 17, 43, 0.45) !important;
-    transform: translateY(-4px) !important;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4) !important;
-  }
-  .c-method-step-badge {
-    font-family: 'Sono Proportional', monospace !important;
-    font-size: 0.72rem !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.08em !important;
-    text-transform: uppercase !important;
-    color: #D0112B !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 0.45rem !important;
-    margin-bottom: 0.65rem !important;
-    background: rgba(208, 17, 43, 0.08) !important;
-    padding: 0.25rem 0.65rem !important;
-    border-radius: 100px !important;
-    width: fit-content !important;
-    border: 1px solid rgba(208, 17, 43, 0.2) !important;
-  }
-  .c-method-step-dot {
-    width: 6px !important;
-    height: 6px !important;
-    background: #D0112B !important;
-    border-radius: 50% !important;
-    display: inline-block !important;
-  }
-  .c-expertise-card__title {
-    font-family: General Sans, sans-serif !important;
-    font-size: clamp(1.15rem, 1.4vw, 1.35rem) !important;
-    font-weight: 600 !important;
-    color: #FAFAFA !important;
-    line-height: 1.22 !important;
-    margin-bottom: 0.65rem !important;
-  }
-  .c-expertise-card__description p {
-    font-size: 0.88rem !important;
-    line-height: 1.52 !important;
-    color: rgba(250, 250, 250, 0.75) !important;
-    margin-bottom: 1rem !important;
-  }
-  .c-method-output-box {
-    background: rgba(208, 17, 43, 0.06) !important;
-    border-left: 3px solid #D0112B !important;
-    border-radius: 6px !important;
-    padding: 0.65rem 0.85rem !important;
-    margin-bottom: 1rem !important;
-  }
-  .c-method-output-label {
-    font-family: 'Sono Proportional', monospace !important;
-    font-size: 0.68rem !important;
-    font-weight: 700 !important;
-    color: #D0112B !important;
-    letter-spacing: 0.08em !important;
-    text-transform: uppercase !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.35rem !important;
-    margin-bottom: 0.2rem !important;
-  }
-  .c-method-output-text {
-    font-family: General Sans, sans-serif !important;
-    font-size: 0.82rem !important;
-    font-weight: 500 !important;
-    color: #FAFAFA !important;
-    line-height: 1.35 !important;
-  }
-  .c-method-card-footer {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding-top: 0.75rem !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
-    margin-top: auto !important;
-  }
-  .c-method-card-action {
-    font-family: 'Sono Proportional', monospace !important;
-    font-size: 0.75rem !important;
-    color: rgba(250, 250, 250, 0.6) !important;
-    letter-spacing: 0.02em !important;
-    transition: color 0.2s ease !important;
-  }
-  .c-expertise-card:hover .c-method-card-action {
-    color: #FAFAFA !important;
-  }
-
   /* ITEM 5: REWORKED EXECUTIVE B2B FOOTER */
   .c-footer {
     padding: clamp(50px, 6vw, 75px) 0 28px 0 !important;
@@ -1494,57 +1392,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       line-height: 1.15 !important;
       margin-bottom: 0.5rem !important;
     }
-    .c-home-expertises__cards {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 0.65rem !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-    .c-home-expertises__card-container {
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-    .c-expertise-card {
-      padding: 0.85rem 1rem !important;
-      border-radius: 12px !important;
-    }
-    .c-expertise-card__inner,
-    .c-expertise-card__info,
-    .c-expertise-card__description,
-    .c-expertise-card__title,
-    .c-expertise-card .c-icon-btn {
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-    }
-    .c-expertise-card__bg {
-      display: none !important;
-    }
-    .c-expertise-card__title {
-      font-size: 1.05rem !important;
-      line-height: 1.25 !important;
-      margin-bottom: 0.25rem !important;
-    }
-    .c-expertise-card__description p {
-      font-size: 0.8rem !important;
-      line-height: 1.42 !important;
-      margin-bottom: 0.45rem !important;
-    }
-    .c-expertise-card .u-word {
-      opacity: 1 !important;
-      transform: none !important;
-    }
-    .c-expertise-card [data-split-text-inner] {
-      transform: none !important;
-    }
-
     /* ITEM 3: SECTION LIMA KOMPETENSI DI MOBILE - PHOTO 100% INSIDE THE CARD */
     .c-home-projects {
       min-height: auto !important;
@@ -2021,7 +1868,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <path d="M769 768C769 555.37 597.077 383 385 383C172.923 383 1 555.37 1 768" stroke="#121212"/>
 <line x1="384.51" y1="767.902" x2="537.51" y2="0.902145" stroke="#121212"/>
 </svg>
-</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a><h3 class="c-expertise-card__title">01 Pahami konteks bisnis</h3><div class="c-expertise-card__info"><div class="c-expertise-card__description | o-wysiwyg"><p>Mengidentifikasi kebutuhan, tantangan, dan peluang nyata organisasi Anda. Peserta membawa satu tantangan nyata dari tempat kerja sebagai bahan utama workshop.<br><strong style="color:#D0112B">Output: Problem Statement yang jelas</strong></p></div><div class="c-icon-btn --arrow-bottom-right --red" aria-hidden="true"></div></div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>02</span> / 04</div><article class="c-expertise-card --b" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="768" height="768" viewBox="0 0 768 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a><h3 class="c-expertise-card__title">01 Pahami konteks bisnis</h3><div class="c-expertise-card__info"><div class="c-expertise-card__description | o-wysiwyg"><p>Mengidentifikasi kebutuhan, tantangan, dan peluang nyata organisasi Anda. Peserta membawa satu tantangan nyata dari tempat kerja sebagai bahan utama workshop.<br><strong style="color:#D0112B">Output: Problem Statement yang jelas</strong></p></div><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>02</span> / 04</div><article class="c-expertise-card --b" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="768" height="768" viewBox="0 0 768 768" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M65.9355 384.379C153.466 471.909 295.71 471.584 383.647 383.646C471.585 295.709 471.91 153.465 384.38 65.9346C296.85 -21.5955 154.605 -21.2704 66.668 66.667C-21.2693 154.604 -21.5945 296.849 65.9355 384.379Z" stroke="#121212"/>
 <path d="M383.623 702.065C471.153 789.595 613.398 789.27 701.335 701.333C789.272 613.396 789.597 471.151 702.067 383.621C614.537 296.091 472.293 296.416 384.355 384.354C296.418 472.291 296.093 614.535 383.623 702.065Z" stroke="#121212"/>
 <line y1="-0.5" x2="449.277" y2="-0.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 225.402 225.401)" stroke="#121212"/>
@@ -2038,7 +1885,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </clipPath>
 </defs>
 </svg>
-</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a><h3 class="c-expertise-card__title">03 Validasi & rencana aksi</h3><div class="c-expertise-card__info"><div class="c-expertise-card__description | o-wysiwyg"><p>Menguji asumsi, menyempurnakan pendekatan, dan menyusun roadmap implementasi. Setiap peserta pulang dengan langkah kerja yang siap dijalankan.<br><strong style="color:#D0112B">Output: Action Plan Awal yang terukur</strong></p></div><div class="c-icon-btn --arrow-bottom-right --red" aria-hidden="true"></div></div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>04</span> / 04</div><article class="c-expertise-card --d" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="968" height="768" viewBox="0 0 968 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div><div class="c-expertise-card__inner"><a href="https://docs.google.com/forms/d/e/1FAIpQLScTLClxHJTqTis0Rq7f8cRhor9hGSKAzsU7TSB0c7sIQeqo9Q/viewform" target="_blank" rel="noopener noreferrer" class="c-expertise-card__link" aria-label="Daftar workshop"></a><h3 class="c-expertise-card__title">03 Validasi & rencana aksi</h3><div class="c-expertise-card__info"><div class="c-expertise-card__description | o-wysiwyg"><p>Menguji asumsi, menyempurnakan pendekatan, dan menyusun roadmap implementasi. Setiap peserta pulang dengan langkah kerja yang siap dijalankan.<br><strong style="color:#D0112B">Output: Action Plan Awal yang terukur</strong></p></div><div class="c-icon-btn --arrow-bottom-right --transparent" aria-hidden="true"></div></div></div></div></article></div><div class="c-home-expertises__card-container"><div class="c-home-expertises__card-number"><span>04</span> / 04</div><article class="c-expertise-card --d" ><div class="c-expertise-card__bg" aria-hidden="true"><svg width="968" height="768" viewBox="0 0 968 768" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="725.31" cy="383.762" r="241.27" stroke="#121212"/>
   <circle cx="483.54" cy="525.754" r="241.27" stroke="#121212"/>
   <circle cx="241.77" cy="383.762" r="241.27" stroke="#121212"/>
