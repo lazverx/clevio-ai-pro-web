@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #0F172A;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* 1 Section = Exactly 1 Whole Screen (100dvh / 100svh safe from mobile bars) */
+.snap-section {
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Editorial Arched Window Hero Mask matching reference mockup */
+.hero-arch-mask {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Concentric Arc Waves on Full-Bleed Dark Section */
+.wave-arcs {
+  position: absolute;
+  left: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 1px solid rgba(99, 102, 241, 0.18);
+  pointer-events: none;
+}
+.wave-arcs::before {
+  content: '';
+  position: absolute;
+  left: 70px;
+  top: 70px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 1px solid rgba(99, 102, 241, 0.12);
+}
+.wave-arcs::after {
+  content: '';
+  position: absolute;
+  left: 140px;
+  top: 140px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 1px solid rgba(99, 102, 241, 0.08);
+}
+

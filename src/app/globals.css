@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Palette (Deep Bronze / Warm Espresso Sepia) */
+  --color-brand-50: #FDF9F6;
+  --color-brand-100: #F5EAE1;
+  --color-brand-200: #EBD6C5;
+  --color-brand-300: #D8B799;
+  --color-brand-400: #BA8E68;
+  --color-brand-500: #9B6C43;
+  --color-brand-600: #7C4F29;
+  --color-brand-700: #5E391A;
+  --color-brand-800: #422610;
+  --color-brand-900: #2C180A;
+  --color-brand-950: #190D05;
+
+  /* Editorial Paper & Surface Tints (Warm Editorial Chalk) */
+  --color-paper: #FAFAF8;
+  --color-paper-contrast: #F3F3EE;
+  --color-paper-line: #E8E8E2;
+
+  /* Executive Dark Surfaces */
+  --color-surface-dark: #0F0D0B;
+  --color-border-dark: #27211C;
+
+  /* Typography - PolySans */
+  --font-sans: var(--font-polysans), "PolySans", "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-polysans), "PolySans", "Helvetica Neue", Arial, sans-serif;
+  --font-body: var(--font-polysans), "PolySans", "Helvetica Neue", Arial, sans-serif;
+
+  /* Radii scale */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #111110;
+    background-color: #FAFAF8;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* 0.2 Single Max-Width Container & Column System */
+.container-executive {
+  max-width: 80rem; /* 1280px / max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container-executive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-executive {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* 1 Section = Whole Screen (100dvh) with vertical centering & controlled whitespace */
+.snap-section {
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Editorial Arched Window Hero Mask */
+.hero-arch-mask {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Concentric Arc Waves on Full-Bleed Dark Section */
+.wave-arcs {
+  position: absolute;
+  left: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 1px solid rgba(186, 142, 104, 0.22);
+  pointer-events: none;
+}
+.wave-arcs::before {
+  content: '';
+  position: absolute;
+  left: 70px;
+  top: 70px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 1px solid rgba(186, 142, 104, 0.14);
+}
+.wave-arcs::after {
+  content: '';
+  position: absolute;
+  left: 140px;
+  top: 140px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 1px solid rgba(186, 142, 104, 0.08);
+}
+
+/* 0.4 Respect prefers-reduced-motion strictly */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
